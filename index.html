@@ -7,7 +7,11 @@
     <title>Vite + React + TS</title>
   </head>
   <body>
-    <div id="root"></div>
+    <custom-element-app 
+      componentDefinition='{"name": "componentField", "componentName": "custom-element-app", "fullWidth": true, "environmentList": [{"name": "Local Test", "url": "http://localhost:3010"}, {"name": "Local", "url": "http://localhost:3000"}]}'
+      template='{"name": "Sample Template", "systemHeader": {"systemType": "template", "currentVersion": true}, "documentId": "template-documentId"}'
+      document='{"name": "Sample Document", "systemHeader": {"systemType": "document", "currentVersion": true, "summaryName": "Sample Document"}, "documentId": "document-documentId"}'
+    ></custom-element-app>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
