@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormBird Component Demo</title>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+        }
+        .demo-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .demo-content {
+            padding: 2rem;
+        }
+        .demo-section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+        .demo-section h3 {
+            margin-top: 0;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>FormBird React Component Demo</h1>
+            <p>Styled with Tailwind CSS and modern design principles</p>
+        </div>
+        
+        <div class="demo-content">
+            <div class="demo-section">
+                <h3>Basic Usage</h3>
+                <p>This demonstrates the component with default props:</p>
+                <custom-element-app></custom-element-app>
+            </div>
+            
+            <div class="demo-section">
+                <h3>With Sample Data</h3>
+                <p>This demonstrates the component with sample FormBird data:</p>
+                <custom-element-app 
+                    field-name="sampleField"
+                    field-value="Hello World"
+                    message="This is a sample message from FormBird"
+                    document='{"id": "123", "name": "Sample Document", "status": "active"}'
+                    template='{"type": "form", "version": "1.0", "fields": ["field1", "field2"]}'
+                    form-parameters='{"mode": "edit", "userId": "user123"}'
+                ></custom-element-app>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/customElementApp.tsx"></script>
+</body>
+</html> 
